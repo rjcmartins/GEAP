@@ -1,0 +1,103 @@
+<div id="starter" ng-init="" ng-destroy="" data-component="crn-start" screen-params="" primary-datasource="Beneficiario">
+
+<img alt="image" src="public/assets/nova-logo-geap-com-slogan.svg" class="crn-image" style="object-fit: contain" object-fit="object-fit: contain;" xattr-position="" width="100px" height="100px" data-component="crn-image" id="crn-image-584235"><div class="component-holder ng-scope" data-component="crn-button" id="crn-button-681435"><button class="btn k-button btn-block btn-default" ng-click="cronapi.server('blockly.BlocoTeste.Executar').run()" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-music text-color-success" icon-theme="text-color-success"></i> <span class="" text-theme="">Aviso</span></button></div><h1 class="component-holder text-left h3 title" xattr-position="text-left" xattr-type="h3" data-component="crn-text-component" id="crn-text-component-9419">Beneficiario</h1>
+<datasource data-component="crn-datasource" filter="" name="Beneficiario" entity="app.Beneficiario" keys="_objectKey" rows-per-page="100" class="" schema="" condition="{&quot;maxRecord&quot;:100,&quot;params&quot;:[],&quot;expression&quot;:{&quot;type&quot;:&quot;OR&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;%&quot;,&quot;left&quot;:&quot;nome&quot;,&quot;right&quot;:&quot;{{vars.search|raw}}&quot;,&quot;args&quot;:[]}]}}" lazy="true"></datasource>
+
+        <div role="search" ng-hide="Beneficiario.inserting || Beneficiario.editing" data-component="crn-textinput" id="crn-datasource-filter-general9419" class="">
+            <div class="form-group">
+                <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
+                <input type="text" ng-model="vars.search" id="textinput-filter" class="form-control k-textbox" value="" placeholder="{{'template.crud.search' | translate}}">
+            </div>
+        </div>
+
+<section ng-hide="Beneficiario.editing || Beneficiario.inserting" class="component-holder ng-binding ng-scope" data-component="crn-cron-grid" id="cron-crn-grid-search">
+    <cron-grid options="" ng-model="vars.grid9419" class="" style="" scrollable="false">
+    </cron-grid>
+</section>
+
+
+<div data-component="crn-form" id="crn-form-form-Beneficiario-9419">
+    <section class="form" ng-show="Beneficiario.editing || Beneficiario.inserting">
+        <form crn-datasource="Beneficiario" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startInserting">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startInserting()" aria-label="{{'StartInserting' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-plus" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startEditing">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startEditing()" aria-label="{{'startEditing' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-pencil" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-previous">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.previous()" ng-disabled="!datasource.hasPrevious()" aria-label="{{'Before' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-chevron-left" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-next">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.next()" ng-disabled="!datasource.hasNext()" aria-label="{{'Next' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-chevron-right" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-remove">
+                    <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.remove()" aria-label="{{'Remove' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
+                        <i class="glyphicon glyphicon-remove" icon-theme=""></i>
+                    </button>
+                </div>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_post_9419">
+                    <button class="btn k-button btn-block btn-success btn-fab" ng-click="datasource.post()" aria-label="{{'SaveChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="">
+                        <i class="glyphicon glyphicon-ok" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_cancel_9419">
+                    <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.cancel()" aria-label="{{'CancelChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
+                        <i class="glyphicon glyphicon-ban-circle" icon-theme=""></i>
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div class="crn-fieldset" ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-nome-9419" class="">
+                        <div class="form-group">
+                                <label for="textinput-nome" class="">Nome</label>
+                                <input type="text" ng-model="Beneficiario.active.nome" class="form-control k-textbox" id="textinput-nome" placeholder="Nome" mask="" mask-placeholder="" ng-required="false">
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-sobrenome-9419" class="">
+                        <div class="form-group">
+                                <label for="textinput-sobrenome" class="">Sobrenome</label>
+                                <input type="text" ng-model="Beneficiario.active.sobrenome" class="form-control k-textbox" id="textinput-sobrenome" placeholder="Sobrenome" mask="" mask-placeholder="" ng-required="false">
+                        </div>
+                    </div>
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-dataNascimento-9419" class="">
+                        <div class="form-group">
+                                <label for="textinput-dataNascimento" class="">Data Nascimento</label>
+                                <input type="date" ng-model="Beneficiario.active.dataNascimento" class="form-control k-textbox" id="textinput-dataNascimento" placeholder="Data Nascimento" mask="" mask-placeholder="" ng-required="false">
+                        </div>
+                    </div>
+                <!-- NtoN  -->
+                <!-- NtoN  end-->
+            </div>
+        </form>
+    </section>
+    <section class="form" ng-show="Beneficiario.editing || Beneficiario.inserting">
+        <form>
+            <div>
+                <!-- OneToN -->
+                <!-- OneToOne  end -->
+            </div>
+        </form>
+    </section>
+</div>
+
+
+</div>

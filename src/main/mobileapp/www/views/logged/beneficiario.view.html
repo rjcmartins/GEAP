@@ -1,0 +1,99 @@
+<ion-view cache-view="false" hide-back-button="true" role="region">
+    <ion-header-bar role="heading" class="bar bar-header bar-default" xattr-theme="bar-default"
+                    data-component="crn-ion-header-bar">
+        <div side="left" class="buttons buttons-left header-item">
+            <button aria-labelledby="left_navicon_sr" class="button button-clear"
+                    ng-if="!Beneficiario.inserting && !Beneficiario.editing" menu-toggle="left"
+                    data-component="crn-button" xattr-type="button-clear">
+                <i class="icon ion-navicon"></i>
+                <span id="left_navicon_sr"
+                      class="sr-only">{{'Accessibility.Button.Aria.Label.NavIcon' | translate}}</span>
+            </button>
+            <button aria-labelledby="left_arrowback_sr" class="button button-clear"
+                    ng-if="Beneficiario.inserting || Beneficiario.editing"
+                    ng-click="Beneficiario.cancel()" data-component="crn-button" xattr-type="button-clear">
+                <i class="icon ion-ios-arrow-back"></i>
+                <span id="left_arrowback_sr" class="sr-only">{{'Roles.view.Voltar' | translate}}</span>
+            </button>
+        </div>
+        <h1 class="title">Beneficiario</h1>
+        <div side="right" class="buttons buttons-right header-item">
+            <button aria-labelledby="right_plus_sr" class="button button-clear"
+                    ng-if="!Beneficiario.inserting && !Beneficiario.editing"
+                    ng-click="Beneficiario.startInserting()" data-component="crn-button"
+                    xattr-type="button-clear">
+                <i class="icon ion-ios-plus-empty"></i>
+                <span id="right_plus_sr" class="sr-only">{{'Accessibility.Button.Aria.Label.Add' | translate}}</span>
+            </button>
+            <button aria-labelledby="right_checkmark_sr" class="button button-clear"
+                    ng-if="Beneficiario.inserting || Beneficiario.editing"
+                    ng-click="Beneficiario.post()" data-component="crn-button" xattr-type="button-clear">
+                <i class="icon ion-ios-checkmark"></i>
+                <span id="right_checkmark_sr"
+                      class="sr-only">{{'Accessibility.Button.Aria.Label.Save' | translate}}</span>
+            </button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle"
+             data-component="crn-datasource" id="crn-datasource-906854">
+            <datasource data-component="crn-datasource"  name="Beneficiario"
+                        entity="app.Beneficiario" keys="_objectKey" rows-per-page="10"
+                        delete-message="Deseja remover?" class=""
+                        schema="" ></datasource>
+        </div>
+
+        <div crn-datasource="Beneficiario" class="" ng-hide="Beneficiario.editing || Beneficiario.inserting">
+            <cron-list ng-model="vars.cronlistBeneficiario" id="ion-list-main" options="" class="component-holder ng-binding ng-scope" data-component="crn-ion-list" id="crn-ion-list-1995">
+            </cron-list>
+        </div>
+        <div ng-show="Beneficiario.editing || Beneficiario.inserting">
+            <form crn-datasource="Beneficiario">
+                <div class="list"
+                     ng-disabled="!Beneficiario.editing &amp;&amp; !Beneficiario.inserting">
+            <!-- nome begin -->
+            <label for="textinput-nome-1995" class="item item-input item-stacked-label"
+                   data-component="crn-input-floating" id="lbl-nome-1995">
+                <span class="input-label">Nome</span>
+                <input
+                        type="text"
+                        placeholder="Nome"
+                        ng-model="Beneficiario.active.nome"
+                        id="textinput-nome-1995"
+                        name="textinput-nome"
+				
+                        mask=""
+				>
+            </label>
+            <!-- sobrenome begin -->
+            <label for="textinput-sobrenome-1995" class="item item-input item-stacked-label"
+                   data-component="crn-input-floating" id="lbl-sobrenome-1995">
+                <span class="input-label">Sobrenome</span>
+                <input
+                        type="text"
+                        placeholder="Sobrenome"
+                        ng-model="Beneficiario.active.sobrenome"
+                        id="textinput-sobrenome-1995"
+                        name="textinput-sobrenome"
+				
+                        mask=""
+				>
+            </label>
+            <!-- dataNascimento begin -->
+            <label for="textinput-dataNascimento-1995" class="item item-input item-stacked-label"
+                   data-component="crn-input-floating" id="lbl-dataNascimento-1995">
+                <span class="input-label">Data Nascimento</span>
+                <input aria-label="Data Nascimento" type="date"
+                       placeholder="Data Nascimento"
+                       ng-model="Beneficiario.active.dataNascimento"
+                       id="textinput-dataNascimento-1995" name="textinput-dataNascimento"
+                       
+                       mask="" >
+            </label>
+
+                    <!-- NtoN  -->
+                    <!-- NtoN  end-->
+            </form>
+        </div>
+    </ion-content>
+</ion-view>
